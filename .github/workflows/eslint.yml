@@ -23,17 +23,17 @@ jobs:
 
       - name: Install ESLint
         run: |
-          yarn add -D eslint@8.0.0 \
-          @typescript-eslint/eslint-plugin@8.0.0 \
-          @typescript-eslint/parser@8.0.0 \
-          eslint-plugin-import@2.31.0 \
+          yarn add -D eslint@8.0.0
+          @typescript-eslint/eslint-plugin@8.0.0
+          @typescript-eslint/parser@8.0.0
+          eslint-plugin-import@2.31.0
           @microsoft/eslint-formatter-sarif@3.1.0
 
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: eslint "{src,apps,libs,test}/**/*.ts" \
-          --format @microsoft/eslint-formatter-sarif \
+        run: eslint "{src,apps,libs,test}/**/*.ts"
+          --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
         continue-on-error: true
 
