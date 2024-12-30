@@ -1,6 +1,7 @@
 # Workspace Interaction Hub
 
 [![LICENSE](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![ESLint](https://github.com/HardManDev/workspace-interaction-hub/actions/workflows/eslint.yml/badge.svg)](https://github.com/HardManDev/workspace-interaction-hub/actions/workflows/eslint.yml)
 
 **Server for Workspace Interaction Hub**
 
