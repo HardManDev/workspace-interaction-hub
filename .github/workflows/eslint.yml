@@ -26,6 +26,9 @@ jobs:
         with:
           node-version: '22.12.0'
 
+      - name: Clean Yarn cache
+        run: yarn cache clean
+
       - name: Install ESLint
         run: |
           yarn add -D eslint@8.0.0 \
@@ -37,6 +40,7 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
+        #yarn eslint "{src,apps,libs,test}/**/*.ts" --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         run: yarn eslint "{src,apps,libs,test}/**/*.ts"
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
