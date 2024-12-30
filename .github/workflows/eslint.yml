@@ -23,10 +23,10 @@ jobs:
 
       - name: Install ESLint
         run: |
-          yarn add -D eslint@8.0.0
-          @typescript-eslint/eslint-plugin@8.0.0
-          @typescript-eslint/parser@8.0.0
-          eslint-plugin-import@2.31.0
+          yarn add -D eslint@8.0.0 \
+          @typescript-eslint/eslint-plugin@8.0.0 \
+          @typescript-eslint/parser@8.0.0 \
+          eslint-plugin-import@2.31.0 \
           @microsoft/eslint-formatter-sarif@3.1.0
 
       - name: Run ESLint
