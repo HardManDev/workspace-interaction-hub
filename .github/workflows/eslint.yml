@@ -32,7 +32,7 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: eslint "{src,apps,libs,test}/**/*.ts"
+        run: yarn eslint "{src,apps,libs,test}/**/*.ts"
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
         continue-on-error: true
